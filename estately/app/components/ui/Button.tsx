@@ -30,7 +30,7 @@ export default function Button({
   className = "",
   ...props
 }: ButtonProps) {
-  const baseStyles = "rounded-full font-medium transition-colors duration-200";
+  const baseStyles = "rounded-full font-medium transition-colors duration-200 cursor-pointer";
   const combinedClassName =
     `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`.trim();
 
