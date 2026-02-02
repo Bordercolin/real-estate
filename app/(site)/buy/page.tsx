@@ -7,12 +7,10 @@ export default function BuyPage() {
       <Container>
         <h1 className="tracking-tight">Buy</h1>
         <p className="mt-2 text-sm text-black/70">
-          Placeholder page. We’ll connect filters + backend later.
+          Choose carefully. Some deeds come with conditions that aren’t written
+          down.
         </p>
       </Container>
     </div>
   );
 }
-
-
-

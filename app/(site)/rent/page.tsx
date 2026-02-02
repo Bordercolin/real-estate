@@ -7,12 +7,9 @@ export default function RentPage() {
       <Container>
         <h1 className="tracking-tight">Rent</h1>
         <p className="mt-2 text-sm text-black/70">
-          Placeholder page. We’ll connect filters + backend later.
+          Short-term stays. Long-term consequences.
         </p>
       </Container>
     </div>
   );
 }
-
-
-

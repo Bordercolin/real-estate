@@ -7,9 +7,7 @@ type CardProps = {
 
 export default function Card({ children, className = "" }: CardProps) {
   return (
-    <div
-      className={`rounded-2xl border border-black/5 bg-white/80 shadow-sm backdrop-blur ${className}`.trim()}
-    >
+    <div className={`paper-card rounded-none ${className}`.trim()}>
       {children}
     </div>
   );

@@ -18,9 +18,11 @@ export default function Home() {
         <Container>
           <div className="flex items-end justify-between gap-6">
             <div>
-              <h2 className="tracking-tight">Featured listings</h2>
+              <h2 className="tracking-tight">Open cases</h2>
               <p className="mt-2 text-sm text-black/70">
-                Handpicked homes and apartments with great photos and details.
+                Recent files pulled from the archives. Some details may be
+                incomplete, altered, or{" "}
+                <span className="redacted">missing</span>.
               </p>
             </div>
             <div className="hidden sm:block">
@@ -48,36 +50,38 @@ export default function Home() {
         <Container>
           <div className="grid gap-6 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-5">
-              <h2 className="tracking-tight">A cleaner way to search</h2>
+              <h2 className="tracking-tight">How the archive works</h2>
               <p className="mt-3 text-sm text-black/70">
-                Built with speed, clarity, and a modern UI. Save favorites and
-                compare listings with ease—backend features come next.
+                Every listing is a “case file”: photos, key facts, and a trail
+                of notes. Save what you find—just don’t ignore the warnings.
               </p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
               <Card className="p-5">
-                <div className="text-sm font-semibold">Saved searches</div>
+                <div className="mono text-xs font-semibold">Saved searches</div>
                 <p className="mt-2 text-sm text-black/70">
-                  Keep what matters. Pick filters once, reuse anytime.
+                  Mark a street. Revisit it later. See what changed while you
+                  slept.
                 </p>
               </Card>
               <Card className="p-5">
-                <div className="text-sm font-semibold">Smart filters</div>
+                <div className="mono text-xs font-semibold">Smart filters</div>
                 <p className="mt-2 text-sm text-black/70">
-                  Bedrooms, price, property type, and more—without clutter.
+                  Sort by price, beds, and location—plus the tags nobody
+                  explains.
                 </p>
               </Card>
               <Card className="p-5">
-                <div className="text-sm font-semibold">Clear cards</div>
+                <div className="mono text-xs font-semibold">Case cards</div>
                 <p className="mt-2 text-sm text-black/70">
-                  Price, location, and key facts at a glance.
+                  Key facts at a glance. The rest is between the lines.
                 </p>
               </Card>
               <Card className="p-5">
-                <div className="text-sm font-semibold">Modern layout</div>
+                <div className="mono text-xs font-semibold">Growing story</div>
                 <p className="mt-2 text-sm text-black/70">
-                  Designed to scale as we add maps, auth, and backend data.
+                  As we wire in real data, the archive gets deeper—and stranger.
                 </p>
               </Card>
             </div>
@@ -90,10 +94,10 @@ export default function Home() {
           <Card className="overflow-hidden">
             <div className="grid gap-8 p-8 md:grid-cols-12 md:items-center">
               <div className="md:col-span-7">
-                <h3 className="tracking-tight">Ready to explore?</h3>
+                <h3 className="tracking-tight">Ready to open the next file?</h3>
                 <p className="mt-2 text-sm text-black/70">
-                  Browse our demo listings now. We’ll hook it up to your backend
-                  later.
+                  Browse the listings. Save your favorites. If a house calls you
+                  by name, we recommend you don’t answer.
                 </p>
               </div>
               <div className="md:col-span-5 md:flex md:justify-end">

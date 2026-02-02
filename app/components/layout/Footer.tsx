@@ -22,16 +22,16 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-black/5 bg-background">
+    <footer className="mt-20 border-t border-black/10 bg-background">
       <Container className="py-12">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <Link href="/" className="title">
-              Estately
+              Estately Archives
             </Link>
             <p className="mt-3 max-w-sm text-sm text-black/60">
-              A modern real estate experience for living and investing. Browse,
-              compare, and save your favorites.
+              A catalog of listings, rumors, and recurring addresses. Browse,
+              compare, and keep notes—quietly.
             </p>
           </div>
 
@@ -42,7 +42,10 @@ export default function Footer() {
                 <ul className="mt-3 space-y-2 text-sm text-black/70">
                   {group.items.map((item) => (
                     <li key={item.label}>
-                      <Link className="hover:underline underline-offset-4" href={item.href}>
+                      <Link
+                        className="hover:underline underline-offset-4"
+                        href={item.href}
+                      >
                         {item.label}
                       </Link>
                     </li>
@@ -56,7 +59,10 @@ export default function Footer() {
         <div className="mt-10 flex flex-col gap-2 border-t border-black/5 pt-6 text-xs text-black/60 sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} Estately. All rights reserved.</div>
           <div className="flex gap-4">
-            <Link className="hover:underline underline-offset-4" href="/privacy">
+            <Link
+              className="hover:underline underline-offset-4"
+              href="/privacy"
+            >
               Privacy
             </Link>
             <Link className="hover:underline underline-offset-4" href="/terms">
@@ -68,6 +74,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-

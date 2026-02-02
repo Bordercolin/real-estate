@@ -10,11 +10,13 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
-  primary: "bg-primary text-white hover:opacity-80",
-  secondary: "bg-secondary text-white hover:opacity-90",
+  primary:
+    "bg-primary text-background border border-primary shadow-[0_2px_0_rgba(0,0,0,0.18)] hover:translate-y-[1px] hover:shadow-[0_1px_0_rgba(0,0,0,0.18)]",
+  secondary:
+    "bg-secondary text-background border border-secondary shadow-[0_2px_0_rgba(0,0,0,0.18)] hover:translate-y-[1px] hover:shadow-[0_1px_0_rgba(0,0,0,0.18)]",
   outline:
-    "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-white",
-  ghost: "text-primary bg-transparent hover:bg-primary/10",
+    "border border-primary text-primary bg-transparent shadow-[0_2px_0_rgba(0,0,0,0.12)] hover:bg-primary/10 hover:translate-y-[1px] hover:shadow-[0_1px_0_rgba(0,0,0,0.12)]",
+  ghost: "text-primary bg-transparent hover:bg-secondary/10 hover:text-primary",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -30,7 +32,8 @@ export default function Button({
   className = "",
   ...props
 }: ButtonProps) {
-  const baseStyles = "rounded-full font-medium transition-colors duration-200 cursor-pointer";
+  const baseStyles =
+    "rounded-none font-semibold uppercase tracking-[0.12em] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-secondary/30";
   const combinedClassName =
     `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`.trim();
 

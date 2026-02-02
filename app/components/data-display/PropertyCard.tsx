@@ -13,27 +13,34 @@ export default function PropertyCard({ property }: { property: Property }) {
             src={property.imageSrc}
             alt={property.title}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+            className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority={false}
           />
           {property.tag ? (
-            <div className="absolute left-3 top-3 rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-white shadow-sm">
+            <div className="stamp absolute left-3 top-3 px-3 py-1 text-[10px] font-bold">
               {property.tag}
             </div>
           ) : null}
         </div>
 
         <div className="p-4">
+          <div className="mono text-[10px] font-semibold text-black/60">
+            Case ID: {property.id.toUpperCase()}
+          </div>
           <div className="flex items-start justify-between gap-4">
             <div>
               <div className="text-sm font-semibold">{property.title}</div>
-              <div className="mt-1 text-xs text-black/60">{property.location}</div>
+              <div className="mt-1 text-xs text-black/60">
+                {property.location}
+              </div>
             </div>
-            <div className="text-sm font-semibold">{formatPriceEUR(property.price)}</div>
+            <div className="text-sm font-semibold">
+              {formatPriceEUR(property.price)}
+            </div>
           </div>
 
-          <div className="mt-3 grid grid-cols-3 gap-2 rounded-xl bg-black/3 p-3 text-xs text-black/70">
+          <div className="mt-3 grid grid-cols-3 gap-2 border border-black/10 bg-black/3 p-3 text-xs text-black/70">
             <div>
               <div className="font-semibold text-black">{property.beds}</div>
               <div>Beds</div>
@@ -52,6 +59,3 @@ export default function PropertyCard({ property }: { property: Property }) {
     </Link>
   );
 }
-
-
-

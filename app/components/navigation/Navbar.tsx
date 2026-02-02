@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -21,10 +20,10 @@ function Navbar() {
   return (
     <Container>
       <nav className="sticky top-0 z-50 -mx-4 sm:-mx-6 lg:-mx-8">
-        <div className="border-b border-black/5 bg-background/80 px-4 py-4 backdrop-blur sm:px-6 lg:px-8">
+        <div className="paper-strip px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <Link href="/" className="title tracking-tight">
-              Estately
+              Estately Archives
             </Link>
 
             <div className="hidden items-center gap-8 md:flex">
@@ -32,7 +31,7 @@ function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-black/80 hover:text-black hover:underline underline-offset-4"
+                  className="mono text-xs font-semibold text-black/80 hover:text-black hover:underline"
                 >
                   {link.label}
                 </Link>
@@ -50,7 +49,7 @@ function Navbar() {
 
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white/70 px-4 py-2 text-sm font-medium shadow-sm backdrop-blur md:hidden"
+              className="paper-card mono inline-flex items-center justify-center rounded-none px-4 py-2 text-xs font-semibold shadow-sm md:hidden"
               onClick={() => setMobileOpen((v) => !v)}
               aria-expanded={mobileOpen}
               aria-label="Toggle navigation menu"
@@ -75,13 +74,13 @@ function Navbar() {
         </div>
 
         {mobileOpen ? (
-          <div className="border-b border-black/5 bg-background/95 px-4 py-4 backdrop-blur sm:px-6 md:hidden lg:px-8">
+          <div className="paper-strip px-4 py-4 sm:px-6 md:hidden lg:px-8">
             <div className="grid gap-3">
               {links.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="rounded-xl px-3 py-2 text-sm font-medium text-black/80 hover:bg-black/5 hover:text-black"
+                  className="mono rounded-none px-3 py-2 text-xs font-semibold text-black/80 hover:bg-black/5 hover:text-black"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
